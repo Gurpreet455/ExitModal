@@ -37,7 +37,7 @@ document.body.style.overflow = "hidden";
 else
 { 
 
-    window.addEventListener("popstate", (event) => {
   alert('mbl')
+    window.addEventListener("popstate", (event) => {
 });
 }
