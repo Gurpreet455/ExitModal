@@ -38,7 +38,11 @@ else
 { 
 
   alert('mbl')
-    window.addEventListener("popstate", (event) => {
-  alert('mbl-v2')
-});
+   window.history.pushState(null, "", window.location.href);
+        // alert("counter "+counter+" exitshow "+exitshow+" backButton"+backButton);
+        $(window).on('popstate', function () {
+  alert('mbl-v3')
+        
+})
+
 }
