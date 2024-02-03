@@ -39,5 +39,6 @@ else
 
   alert('mbl')
     window.addEventListener("popstate", (event) => {
+  alert('mbl-v2')
 });
 }
