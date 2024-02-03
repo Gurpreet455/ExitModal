@@ -38,11 +38,18 @@ else
 { 
 
   alert('mbl')
-   window.history.pushState(null, "", window.location.href);
-        // alert("counter "+counter+" exitshow "+exitshow+" backButton"+backButton);
-        $(window).on('popstate', function () {
-  alert('mbl-v3')
-        
-})
+ window.addEventListener('popstate', function(event) {
+      // This function will be called when the back button is pressed
+      alert('Back button pressed!');
+    });
+
+    // To push a state onto the history stack (so that the popstate event will be triggered)
+    history.pushState({ page: 1 }, "title 1", "#");
+
+    // To prevent the user from navigating away by pressing the back button
+    history.pushState(null, null, location.href);
+    window.onpopstate = function () {
+      history.go(1);
+    };
 
 }
