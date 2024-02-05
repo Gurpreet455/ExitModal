@@ -38,16 +38,17 @@ else
 
   alert('mbl')
   window.onhashchange = function() {
-
-}
-function goBack() {
-    window.location.hash = window.location.lasthash[window.location.lasthash.length-1];
-    window.location.lasthash.pop();
+    alert("backBtn")
     modalCount++
 if(modalCount <=maxshow){
 exitModal.style.display = 'block'
 document.body.style.overflow = "hidden";
   }
+}
+function goBack() {
+    window.location.hash = window.location.lasthash[window.location.lasthash.length-1];
+    window.location.lasthash.pop();
+
 }
 
 }
