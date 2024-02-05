@@ -37,14 +37,14 @@ else
 { 
 
   alert('mbl1')
-  window.onhashchange = function() {
-    // alert("backBtn1")
+window.onhashchange = function() {
+    alert("0")
+ //blah blah blah
 }
 function goBack() {
     window.location.hash = window.location.lasthash[window.location.lasthash.length-1];
-    alert("backBtn2")
+    alert("01")
     window.location.lasthash.pop();
-
 }
 
 }
