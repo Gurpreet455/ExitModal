@@ -38,14 +38,16 @@ else
 
   alert('mbl1')
  window.addEventListener('popstate', function(event) {
-  
-      alert('Back button pressed!');
+        modalCount++
+if(modalCount <=maxshow){
+exitModal.style.display = 'block'
+document.body.style.overflow = "hidden";
+  alert('mbl2')
+  }
     });
 
-    // To push a state onto the history stack (so that the popstate event will be triggered)
     history.pushState({ page: 1 }, "title 1", "#");
 
-    // To prevent the user from navigating away by pressing the back button
     history.pushState(null, null, location.href);
     window.onpopstate = function () {
       history.go(1);
