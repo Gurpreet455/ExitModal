@@ -36,19 +36,14 @@ document.body.style.overflow = "hidden";
 else
 { 
 
-  alert('mbl')
+  alert('mbl1')
   window.onhashchange = function() {
-    alert("backBtn1")
-    // modalCount++
-// if(modalCount <=maxshow){
-// exitModal.style.display = 'block'
-// document.body.style.overflow = "hidden";
-//   }
+    // alert("backBtn1")
 }
 function goBack() {
     window.location.hash = window.location.lasthash[window.location.lasthash.length-1];
-    window.location.lasthash.pop();
     alert("backBtn2")
+    window.location.lasthash.pop();
 
 }
 
