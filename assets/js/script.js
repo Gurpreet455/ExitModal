@@ -37,14 +37,18 @@ else
 { 
 
   alert('mbl1')
-window.onhashchange = function() {
-    alert("0")
- //blah blah blah
-}
-function goBack() {
-    window.location.hash = window.location.lasthash[window.location.lasthash.length-1];
-    alert("01")
-    window.location.lasthash.pop();
-}
+ window.addEventListener('popstate', function(event) {
+      // This function will be called when the back button is pressed
+      alert('Back button pressed!');
+    });
+
+    // To push a state onto the history stack (so that the popstate event will be triggered)
+    history.pushState({ page: 1 }, "title 1", "#");
+
+    // To prevent the user from navigating away by pressing the back button
+    history.pushState(null, null, location.href);
+    window.onpopstate = function () {
+      history.go(1);
+    };
 
 }
