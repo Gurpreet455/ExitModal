@@ -23,12 +23,16 @@ else
 { 
 
  window.addEventListener('popstate', function(event) {
+
         modalCount++
   if(modalCount <=maxshow){
   alert('mbl1')
 exitModal.style.display = 'block'
 document.body.style.overflow = "hidden";
   alert('mbl2')
+  }
+  else{
+    window.history.back()
   }
     });
 
