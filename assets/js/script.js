@@ -38,7 +38,7 @@ document.body.style.overflow = "hidden";
     };
   }
   else{
-    window.history.back()
+    history.go(0);
   }
   }
 
