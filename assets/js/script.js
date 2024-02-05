@@ -37,11 +37,9 @@ document.body.style.overflow = "hidden";
       history.go(1);
     };
   }
-
-
-   
-
-
+  else{
+    window.history.back()
+  }
   }
 
 
