@@ -48,7 +48,7 @@ document.body.style.overflow = "hidden";
 
     history.pushState({ page: 1 }, "title 1", "#");
 
-    history.pushState(null, null, location.href);
+    history.pushState(null, "", location.href);
     window.onpopstate = function () {
       history.go(1);
     };
