@@ -28,7 +28,7 @@ else{
         modalCount++
 exitModal.style.display = 'block'
 document.body.style.overflow = "hidden";
-  alert('mbl3')
+  alert('mbl4')
   
     });
  history.pushState({ page: 1 }, "title 1", "#");
