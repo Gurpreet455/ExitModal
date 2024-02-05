@@ -38,7 +38,7 @@ else
 
   alert('mbl1')
  window.addEventListener('popstate', function(event) {
-      // This function will be called when the back button is pressed
+  
       alert('Back button pressed!');
     });
 
