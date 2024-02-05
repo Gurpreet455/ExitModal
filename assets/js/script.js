@@ -23,9 +23,9 @@ document.body.style.overflow = "hidden";
 // mobile
 else{ 
 
+        modalCount++
   if(modalCount <= maxshow){
  window.addEventListener('popstate', function(event) {
-        modalCount++
 exitModal.style.display = 'block'
 document.body.style.overflow = "hidden";
   alert('mbl4')
