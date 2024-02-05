@@ -28,9 +28,8 @@ else{
  window.addEventListener('popstate', function(event) {
 exitModal.style.display = 'block'
 document.body.style.overflow = "hidden";
-  alert('mbl4')
+  alert('mbl4') });
   
-    });
  history.pushState({ page: 1 }, "title 1", "#");
     history.pushState(null, "", location.href);
     window.onpopstate = function () {
