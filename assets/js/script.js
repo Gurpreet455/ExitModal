@@ -18,7 +18,6 @@ let closeModal = document.querySelector('.closeBtn');
 closeModal.addEventListener('click',function(){
   exitModal.style.display = 'none'
 document.body.style.overflow = "auto";
-
 })
 
 
@@ -38,18 +37,14 @@ else
 { 
 
   alert('mbl')
- window.addEventListener('popstate', function(event) {
-      // This function will be called when the back button is pressed
-      alert('Back button pressed!');
-    });
+  window.onhashchange = function() {
+ alert("onhashchange1")
+}
+function goBack() {
+    window.location.hash = window.location.lasthash[window.location.lasthash.length-1];
+    alert("onhashchange2")
+    window.location.lasthash.pop();
 
-    // To push a state onto the history stack (so that the popstate event will be triggered)
-    history.pushState({ page: 1 }, "title 1", "#");
-
-    // To prevent the user from navigating away by pressing the back button
-    history.pushState(null, null, location.href);
-    window.onpopstate = function () {
-      history.go(1);
-    };
+}
 
 }
