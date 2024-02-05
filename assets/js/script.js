@@ -31,15 +31,12 @@ exitModal.style.display = 'block'
 document.body.style.overflow = "hidden";
   alert('mbl2')
   }
-  else{
-    window.history.back()
-  }
     });
 
     history.pushState({ page: 1 }, "title 1", "#");
     history.pushState(null, "", location.href);
     window.onpopstate = function () {
-      history.go(1);
+      history.go();
     };
   }
 
