@@ -21,20 +21,20 @@ document.body.style.overflow = "hidden";
 }
 else
 { 
-  alert('mbl2')
+  alert('mbl1')
  window.addEventListener('popstate', function(event) {
         modalCount++
 if(modalCount <=maxshow){
 exitModal.style.display = 'block'
 document.body.style.overflow = "hidden";
-  alert('mbl3')
+  alert('mbl2')
   }
-  history.pushState({ page: 1 }, "title 1", "#");
+  
+    });
+    history.pushState({ page: 1 }, "title 1", "#");
 
     history.pushState(null, "", location.href);
     window.onpopstate = function () {
       history.go(1);
     };
-    });
-  
 }
