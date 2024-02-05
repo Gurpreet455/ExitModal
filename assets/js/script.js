@@ -22,22 +22,26 @@ document.body.style.overflow = "hidden";
 }
 // mobile
 else{ 
- window.addEventListener('popstate', function(event) {
 
+  if(modalCount <= maxshow){
+ window.addEventListener('popstate', function(event) {
         modalCount++
-  if(modalCount <=maxshow){
-  alert('mbl1')
 exitModal.style.display = 'block'
 document.body.style.overflow = "hidden";
-  alert('mbl2')
-  }
+  alert('mbl3')
+  
     });
-
-    history.pushState({ page: 1 }, "title 1", "#");
+ history.pushState({ page: 1 }, "title 1", "#");
     history.pushState(null, "", location.href);
     window.onpopstate = function () {
-      history.go();
+      history.go(1);
     };
+  }
+
+
+   
+
+
   }
 
 
