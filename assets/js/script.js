@@ -8,6 +8,7 @@ closeModal.addEventListener('click',function(){
 document.body.style.overflow = "auto";
 })
 
+// desktop
 if(window.innerWidth > 768){
 console.log("desktop")
 document.addEventListener('mouseleave',function(e){
@@ -19,9 +20,8 @@ document.body.style.overflow = "hidden";
   }}
 })
 }
-else
-{ 
-
+// mobile
+else{ 
  window.addEventListener('popstate', function(event) {
 
         modalCount++
