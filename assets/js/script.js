@@ -21,14 +21,15 @@ document.body.style.overflow = "hidden";
 }
 else
 { 
-  if(modalCount <=maxshow){
-  alert('mbl1')
+
  window.addEventListener('popstate', function(event) {
         modalCount++
-
+  if(modalCount <=maxshow){
+  alert('mbl1')
 exitModal.style.display = 'block'
 document.body.style.overflow = "hidden";
   alert('mbl2')
+  }
     });
 
     history.pushState({ page: 1 }, "title 1", "#");
@@ -37,7 +38,7 @@ document.body.style.overflow = "hidden";
       history.go(1);
     };
   }
-}
+
 
 
 // window.history.back();
